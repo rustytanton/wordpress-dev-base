@@ -13,6 +13,8 @@ A base project for my typical [WordPress](https://wordpress.org/) theme/plugin d
 3) Run command `./bin/setup.sh`
 4) Wait a couple of minutes, then visit http://localhost:8081/wp-admin
 
+Edit `provision/wordpress/Dockerfile` to pre-install themes/plugin files.
+
 # Local Development Helper Scripts
 
 * `./bin/setup.sh` - (DESTRUCTIVE to existing Docker volumes) run whenever you're rebuilding the Docker WordPress image or want to wipe/reload the database
