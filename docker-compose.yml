@@ -32,7 +32,7 @@ services:
       PMA_HOST: mysql
     ports:
       - 8082:80
-  wp-cli:
+  wp_cli:
     depends_on: 
       - mysql
       - wordpress
@@ -41,6 +41,22 @@ services:
     volumes:
       - webroot:/var/www/html
       - ./src/plugins/example:/var/www/html/wp-content/plugins/example
+  wordpress_phpunit:
+    depends_on:
+      - mysql_phpunit
+    image: "chriszarate/wordpress-phpunit:6.0.6"
+    environment:
+      PHPUNIT_DB_HOST: "mysql_phpunit"
+    volumes:
+      - ".:/app"
+      - "testsuite:/tmp"
+  mysql_phpunit:
+    image: "mysql:5.7"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "wordpress_test"
+      MYSQL_ROOT_PASSWORD: ""
 volumes:
   mysql-data: {}
+  testsuite: {}
   webroot: {}

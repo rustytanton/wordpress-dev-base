@@ -16,6 +16,15 @@ A base project for my typical [WordPress](https://wordpress.org/) theme/plugin d
 
 Edit `provision/wordpress/Dockerfile` to pre-install remote themes/plugin files.
 
+# Unit Testing
+Run tests with `./bin/phpunit.sh` or `./bin/phpunit.sh --testsuite "Plugins"`
+
+You can run the following command to bootstrap unit tests for a new plugin:
+
+```./bin/wp.sh scaffold plugin-tests example```
+
+That's how the tests for the `example` plugin were generated.
+
 # Local Development Helper Scripts
 
 * `./bin/setup.sh` - (DESTRUCTIVE to existing Docker volumes) run whenever you're rebuilding the Docker WordPress image or want to wipe/reload the database
@@ -23,3 +32,4 @@ Edit `provision/wordpress/Dockerfile` to pre-install remote themes/plugin files.
 * `./bin/shutdown.sh` - (non-destructive to Docker volumes) run if you're done working on this project for a while
 * `./bin/dump-database.sh` - dumps the `wordpress` database to `./provision/mysql/dump.sql`, will be reloaded in this state next time you run `./bin/setup.sh`
 * `./bin/wp.sh` - runs [WP-CLI](https://wp-cli.org/) against the running local install
+* `./bin/bootstrap-tests.sh` - set up Docker environment to allow unit tests
