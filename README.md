@@ -8,12 +8,13 @@ A base project for my typical [WordPress](https://wordpress.org/) theme/plugin d
 
 # Setup
 
-1) Install `docker`, `docker-compose` and (if on a Mac) `docker-machine`
-2) If on a Mac using `docker-machine` + [Virtualbox](https://www.virtualbox.org/), map NAT ports 8081 and 8082 on "default" virtual machine (or whatever you named it) to localhost
-3) Run command `./bin/setup.sh`
-4) Wait a couple of minutes, then visit http://localhost:8081/wp-admin
+1) Clone this repo, rename, change git remote to point to your repository
+2) Install `docker`, `docker-compose` and (if on a Mac) `docker-machine`
+3) If on a Mac using `docker-machine` + [Virtualbox](https://www.virtualbox.org/), map NAT ports 8081 and 8082 on "default" virtual machine (or whatever you named it) to localhost
+4) Run command `./bin/setup.sh`
+5) Wait a couple of minutes, then visit http://localhost:8081/wp-admin
 
-Edit `provision/wordpress/Dockerfile` to pre-install themes/plugin files.
+Edit `provision/wordpress/Dockerfile` to pre-install remote themes/plugin files.
 
 # Local Development Helper Scripts
 
@@ -21,3 +22,4 @@ Edit `provision/wordpress/Dockerfile` to pre-install themes/plugin files.
 * `./bin/start.sh` - (non-destructive to Docker volumes) run if you've rebooted since the last time you worked in this project
 * `./bin/shutdown.sh` - (non-destructive to Docker volumes) run if you're done working on this project for a while
 * `./bin/dump-database.sh` - dumps the `wordpress` database to `./provision/mysql/dump.sql`, will be reloaded in this state next time you run `./bin/setup.sh`
+* `./bin/wp.sh` - runs [WP-CLI](https://wp-cli.org/) against the running local install
