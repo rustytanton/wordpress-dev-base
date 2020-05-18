@@ -1,1 +1,0 @@
-bootstrap.php is copied here from the example plugin just so the phpunit suite will also run from the root directory

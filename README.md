@@ -33,3 +33,4 @@ That's how the tests for the `example` plugin were generated.
 * `./bin/dump-database.sh` - dumps the `wordpress` database to `./provision/mysql/dump.sql`, will be reloaded in this state next time you run `./bin/setup.sh`
 * `./bin/wp.sh` - runs [WP-CLI](https://wp-cli.org/) against the running local install
 * `./bin/bootstrap-tests.sh` - set up Docker environment to allow unit tests
+* `./bin/phpunit.sh` - runs phpunit (make sure to run `./bin/bootstrap-tests.sh` first)

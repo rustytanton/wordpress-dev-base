@@ -13,15 +13,15 @@
 if ( !class_exists( 'Example_Plugin' ) ) {
     class Example_Plugin
     {
-        public static function init() {
-            add_action( 'wp_footer', 'Example_Plugin::footer_text' );
+        public function __constructor() {
+            add_action( 'wp_footer', array( $this, 'footer_text' ));
         }
  
-        public static function footer_text() {
+        public function footer_text() {
             return 'Example Plugin Registered';
         }
     }
-    Example_Plugin::init();
+    new Example_Plugin();
 }
 
 ?>

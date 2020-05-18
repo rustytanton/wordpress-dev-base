@@ -48,7 +48,7 @@ services:
     environment:
       PHPUNIT_DB_HOST: "mysql_phpunit"
     volumes:
-      - ".:/app"
+      - "./src:/app"
       - "testsuite:/tmp"
   mysql_phpunit:
     image: "mysql:5.7"
