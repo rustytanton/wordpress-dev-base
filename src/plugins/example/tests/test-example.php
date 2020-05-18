@@ -4,9 +4,13 @@
  *
  * @package Example
  */
-class ExampleTest extends WP_UnitTestCase {
+class ExamplePluginTest extends WP_UnitTestCase {
+	public function setUp() {
+		parent::setUp();
+		$this->instance = new Example_Plugin();
+	}
+
 	public function test_footervalue() {
-		$example = new Example_Plugin();
-		$this->assertEquals( $example->footer_text(), "Example Plugin Registered" );
+		$this->assertEquals( $this->instance->footer_text(), "Example Plugin Registered" );
 	}
 }
