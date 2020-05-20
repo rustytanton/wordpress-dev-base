@@ -73,6 +73,8 @@ ONBUILD RUN \
 VOLUME ["/app"]
 WORKDIR /app
 
+# to run after the image is built
+COPY install-wp-tests.sh /usr/local/bin/install-wp-tests.sh
 
 # ENTRYPOINT ["/usr/local/bin/phpunit"]
 # CMD ["--help"]
