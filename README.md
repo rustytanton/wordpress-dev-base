@@ -23,6 +23,6 @@ Edit `provision/wordpress/Dockerfile` to pre-install remote themes/plugin files.
 * `./bin/shutdown.sh` - (non-destructive to Docker volumes) run if you're done working on this project for a while
 * `./bin/dump-database.sh` - dumps the `wordpress` database to `./provision/mysql/dump.sql`, will be reloaded in this state next time you run `./bin/setup.sh`
 * `./bin/wp.sh` - runs [WP-CLI](https://wp-cli.org/) against the running local install
-* `./bin/bootstrap-tests.sh` - set up Docker environment to allow unit tests
-* `./bin/phpunit.sh` - runs phpunit once
-* `./bin/test-runner.sh` - runs phpunit continuously when changes are made to php files in src/themes or src/plugins
+* `./bin/composer.sh` - runs [Composer](https://getcomposer.org/) from src directory
+* `./bin/phpunit.sh` - runs PHPUnit once
+* `./bin/test-runner.sh` - runs PHPUnit continuously when changes are made to php files in src/themes or src/plugins
