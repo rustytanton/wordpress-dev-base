@@ -41,16 +41,19 @@ services:
     volumes:
       - webroot:/var/www/html
       - ./src/plugins/example:/var/www/html/wp-content/plugins/example
-  wordpress_phpunit:
+  wordpress-phpunit:
     depends_on:
-      - mysql_phpunit
-    image: "chriszarate/wordpress-phpunit:6.0.6"
+      - mysql-phpunit
+    # image: "chriszarate/wordpress-phpunit:6.0.6"
+    build:
+      context: ./provision/wordpress-phpunit
+      dockerfile: Dockerfile
     environment:
-      PHPUNIT_DB_HOST: "mysql_phpunit"
+      PHPUNIT_DB_HOST: "mysql-phpunit"
     volumes:
       - "./src:/app"
       - "testsuite:/tmp"
-  mysql_phpunit:
+  mysql-phpunit:
     image: "mysql:5.7"
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"

@@ -1,1 +1,1 @@
-docker-compose run --rm wordpress_phpunit phpunit $@
+docker-compose run --rm wordpress-phpunit phpunit $@
