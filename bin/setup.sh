@@ -16,4 +16,12 @@ if [ -x "${SCRIPT_DIR}/docker-compose-check.sh" ]; then
     # the wordpress docker image doesn't allow plugin/theme management
     # or media uploads by default
     bash -c "${SCRIPT_DIR}/fix-wp-permissions.sh"
+
+    echo "Sleeping for 60 seconds to allow Docker containers to finish loading..."
+    
+    sleep 60
+
+    echo "Bootstrapping unit test runner..."
+
+    "${SCRIPT_DIR}/bootstrap-tests.sh"
 fi
