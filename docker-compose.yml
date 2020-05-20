@@ -7,7 +7,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: wpdev
     volumes:
-      - ./provision/mysql:/docker-entrypoint-initdb.d
+      - ./provision/mysql/data:/docker-entrypoint-initdb.d
       - mysql-data:/var/lib/mysql
   wordpress:
     depends_on:
