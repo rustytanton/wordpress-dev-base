@@ -1,0 +1,11 @@
+{
+    "better-phpunit.docker.enable": true,
+    "better-phpunit.docker.paths": {
+        // see: https://github.com/calebporzio/better-phpunit/pull/111
+        // when this PR is merged won't have to hard-code path
+        // "${workspaceFolder}/src": "/app"
+        "/Users/rustytanton/sandbox/wordpress-dev-base/src": "/app"
+    },
+    "better-phpunit.docker.command": "docker-compose run --rm wordpress-phpunit /usr/local/bin/phpunit",
+    "better-phpunit.xmlConfigFilepath": "/app/phpunit.xml.dist"
+}

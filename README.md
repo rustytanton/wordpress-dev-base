@@ -26,3 +26,9 @@ Edit `provision/wordpress/Dockerfile` to pre-install remote themes/plugin files.
 * `./bin/composer.sh` - runs [Composer](https://getcomposer.org/) from src directory
 * `./bin/phpunit.sh` - runs PHPUnit once
 * `./bin/test-runner.sh` - runs PHPUnit continuously when changes are made to php files in src/themes or src/plugins
+
+# VS Code support
+
+Example config is built in to:
+
+* Run PHPUnit using [Better PHPUnit](https://marketplace.visualstudio.com/items?itemName=calebporzio.better-phpunit)
