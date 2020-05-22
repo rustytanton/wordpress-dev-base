@@ -1,4 +1,7 @@
 {
+    "name": "rustytanton/wordpress-dev-base",
+    "description": "Base development template for WordPress + Docker",
+    "license": "MIT",
     "require-dev": {
         "mockery/mockery": "^1.3"
     }
