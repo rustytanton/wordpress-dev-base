@@ -21,12 +21,13 @@ require_once $_tests_dir . '/includes/functions.php';
 
 /**
  * Manually load the plugins being tested.
+ * @todo automate this
  */
 function _manually_load_plugins() {
 	$plugin_dir = dirname(__FILE__) . '/plugins/';
 	$theme_dir = dirname(__FILE__) . '/themes/';
 	require $plugin_dir . 'example/example.php';
-	require $theme_dir . 'example/functions.php';
+	require $theme_dir . 'example/classes/example-theme-helper.php';
 }
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugins' );
 
