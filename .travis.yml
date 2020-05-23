@@ -62,5 +62,6 @@ script:
     fi
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
+      cd src
       phpcs
     fi
