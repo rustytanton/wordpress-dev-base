@@ -5,7 +5,7 @@
 A base project for my typical [WordPress](https://wordpress.org/) theme/plugin development workflow:
 
 1) Use [Docker](https://www.docker.com/) for local development / unit testing
-2) (to-do) When changes are merged to master, [Travis CI](https://travis-ci.com/) runs [PHPUnit](https://phpunit.de/) tests
+2) When changes are merged to master, [Travis CI](https://travis-ci.com/) runs [PHPUnit](https://phpunit.de/) tests
 3) (to-do) If unit tests pass, packaged themes/plugins are rsynced to an inexpensive shared host with a managed WordPress install such as [Bluehost](https://www.bluehost.com/)
 
 # Setup
