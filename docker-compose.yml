@@ -23,6 +23,7 @@ services:
     volumes:
       - webroot:/var/www/html
       - ./src/plugins/example:/var/www/html/wp-content/plugins/example
+      - ./src/themes/example:/var/www/html/wp-content/themes/example
   phpmyadmin:
     depends_on:
       - mysql
@@ -41,6 +42,7 @@ services:
     volumes:
       - webroot:/var/www/html
       - ./src/plugins/example:/var/www/html/wp-content/plugins/example
+      - ./src/themes/example:/var/www/html/wp-content/themes/example
   wordpress-phpunit:
     depends_on:
       - mysql-phpunit

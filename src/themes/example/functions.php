@@ -10,7 +10,7 @@ if ( !class_exists( 'Example_ThemeHelper' ) ) {
             wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
         }
 
-        public function helper_text () {
+        public function helper_text() {
             return 'some helper text';
         }
     }
