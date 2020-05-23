@@ -1,5 +1,7 @@
 # WordPress Dev Base
 
+![Travis CI status](https://api.travis-ci.com/rustytanton/wordpress-dev-base.svg?branch=master "Travis CI status")
+
 A base project for my typical [WordPress](https://wordpress.org/) theme/plugin development workflow:
 
 1) Use [Docker](https://www.docker.com/) for local development / unit testing
