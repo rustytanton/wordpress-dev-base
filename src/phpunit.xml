@@ -10,6 +10,7 @@
 	<testsuites>
 		<testsuite name="Plugins">
 			<directory prefix="test-" suffix=".php">./plugins/*/tests/</directory>
+			<directory prefix="test-" suffix=".php">./themes/*/tests/</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>

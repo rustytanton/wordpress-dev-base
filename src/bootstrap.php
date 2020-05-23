@@ -24,7 +24,9 @@ require_once $_tests_dir . '/includes/functions.php';
  */
 function _manually_load_plugins() {
 	$plugin_dir = dirname(__FILE__) . '/plugins/';
+	$theme_dir = dirname(__FILE__) . '/themes/';
 	require $plugin_dir . 'example/example.php';
+	require $theme_dir . 'example/functions.php';
 }
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugins' );
 
