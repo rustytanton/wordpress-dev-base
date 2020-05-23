@@ -58,6 +58,8 @@ script:
   - |
     if [[ ! -z "$WP_VERSION" ]] ; then
       phpunit ./src/
+      ls
+      pwd
     fi
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
