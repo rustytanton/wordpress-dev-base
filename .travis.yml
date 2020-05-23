@@ -57,7 +57,7 @@ before_script:
 script:
   - |
     if [[ ! -z "$WP_VERSION" ]] ; then
-      phpunit $HOME/src
+      phpunit $TRAVIS_BUILD_DIR/src/
       WP_MULTISITE=1 phpunit
     fi
   - |
