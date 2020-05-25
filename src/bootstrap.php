@@ -27,7 +27,7 @@ function _manually_load_plugins() {
 	$plugin_dir = dirname(__FILE__) . '/plugins/';
 	$theme_dir = dirname(__FILE__) . '/themes/';
 	require $plugin_dir . 'example/example.php';
-	require $theme_dir . 'example/classes/example-theme-helper.php';
+	require $theme_dir . 'example/example-theme-helper.php';
 }
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugins' );
 

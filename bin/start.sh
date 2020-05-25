@@ -1,7 +1,7 @@
 SCRIPT_DIR=$( dirname "${BASH_SOURCE[0]}" )
 
 # script will NOT work without docker-compose
-if [ -x "${SCRIPT_DIR}/docker-compose-check.sh" ]; then
+if [ -x "${SCRIPT_DIR}/depcheck.sh" ]; then
     # script should work in Linux environments without this
     if [ -x "$(docker-machine)" ]; then
         eval $(docker-machine env)

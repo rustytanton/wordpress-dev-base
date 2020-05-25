@@ -7,3 +7,15 @@ if ! [ -x "$(docker-compose)" ]; then
 "eval \"\$(docker-machine env default)\"\n--\n\n"
     exit 1
 fi
+
+if ! [ -x "${fswatch}" ]; then
+    echo "\n\nTest runner requires fswatch utility...\n\n"\
+"See: https://github.com/emcrisostomo/fswatch\n\n"
+    exit 1
+fi
+
+if ! [ -x "${realpath}" ]; then
+    echo "\n\nYou need the realpath utility. On Mac OS try:\n"
+"brew install coreutils"
+    exit 1
+fi
